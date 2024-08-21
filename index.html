@@ -1,0 +1,549 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E Commerce Web Store</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+</head>
+<style>
+ @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+  :root{
+    --white: #f9f9f9;
+    --black: rgb(17, 17, 17);
+    --purple: rgb(240, 240, 111);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--white);
+    font-family: "Poppins", sans-serif;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.header{
+  background-color: rgb(240, 240, 111);
+    box-shadow: 1px 1px 5px 0px var(--gray);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.logo{
+    display: inline-block;
+    color: var(--white);
+    font-size: 60px;
+    margin-left: 10px;
+}
+.nav{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: var(--purple);
+    overflow: hidden;
+
+}
+.menu a{
+    display: block;
+    padding: 30px;
+    color: rgb(169, 186, 17);
+    color: white;
+}
+.menu a:hover{
+    background-color: rgb(0, 0, 0);
+}
+.nav{
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+.hamb{
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+}
+
+.hamb-line {
+    background: var(--white);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+
+}
+
+.hamb-line::before,
+.hamb-line::after{
+    background: var(--white);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.hamb-line::before{
+    top: 5px;
+}
+.hamb-line::after{
+    top: -5px;
+}
+
+.side-menu {
+    display: none;
+}
+.side-menu:checked ~ nav{
+    max-height: 100%;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+}
+
+body:has(.side-menu:checked) {
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+    .nav{
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
+    }
+    .menu li{
+        float: left;
+    }
+    .menu a:hover{
+        background-color: transparent;
+        color: var(--purple);
+
+    }
+    .hamb{
+        display: none;
+    }
+}
+.c {
+  height: 90;
+  padding: 10px;
+}
+.header_image {
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    top: 100;
+}
+@media screen and (max-width:600px) {
+    .header_image {
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    top: 100;
+} 
+}
+.text {
+    position: absolute;
+    content: "";
+    color: rgb(255, 255, 255);
+    top: 300;
+    font-size: x-large;
+    margin: 12;
+}
+@media screen and (max-width:600px) {
+    .text {
+    position: absolute;
+    content: "";
+    color: rgb(255, 255, 255);
+    top: 150;
+    font-size: x-large;
+}
+}
+.buttons {
+    position: relative;
+    content: "";
+    top: 440;
+    margin: 12
+}
+@media screen and (max-width:600px) {
+    .buttons {
+    position: relative;
+    content: "";
+    top: 430;
+    cursor: pointer;
+}  
+}
+.container {
+    border: 2px solid rgb(242, 242, 89);
+    height: 440;
+    width: 360;
+    float: left;
+    padding: 10px;
+    margin: 4;
+}
+.box_container {
+    position: absolute;
+    content: "";
+    top: 640;
+    left: 140;
+}
+@media screen and (max-width:600px) {
+    .box_container {
+    position: absolute;
+    content: "";
+    top: 640;
+    left: 10;
+}  
+}
+@media screen and (max-width:600px) {
+    .container {
+    width: 99%;
+    height: 360px;
+}  
+}
+.box_container_text {
+    position: absolute;
+    content: "";
+    top: 890;
+    left: 160;
+    cursor: pointer;
+    color: #f9f9f9;
+    padding: 10px;
+}
+@media screen and (max-width:600px) {
+    .box_container_text {
+    position: absolute;
+    content: "";
+    top: 800;
+    left: 50;
+    padding: 5px;
+}   
+}
+.container_text1 {
+    color: rgb(255, 255, 255);
+    position: absolute;
+    content: "";
+    left: 400;
+    bottom: 10;
+}
+@media screen and (max-width:600px) {
+    .container_text1 {
+    color: rgb(255, 255, 255);
+    position: relative;
+    content: "";
+    left: 10;
+    top: 200;
+}
+}
+.container_text2 {
+    color: rgb(255, 255, 255);
+    position: absolute;
+    content: "";
+    left: 750;
+    bottom: 10;
+}
+@media screen and (max-width:600px) {
+    .container_text2 {
+    color: rgb(255, 255, 255);
+    position: absolute;
+    content: "";
+    left: 10;
+    top: 720;
+}
+}
+.items {
+    float: left;
+    padding: 5px;
+    width: 260px;
+    position: relative;
+    content: "";
+    right: 90;
+    
+}
+.product1 {
+    height: 191;
+    width: 215;
+}
+.product2 {
+    height: 191;
+    width: 244;
+}
+.featured_projects {
+    position:absolute;
+    top: 1200;
+    left: 200;
+}
+@media screen and (max-width:900px) {
+    .items {
+    float: left;
+    width: 101px;
+    position: relative;
+    right: 200;
+    font-size: small;
+    text-align: center;
+    top: 600;
+  
+}
+.shoes1_text {
+    position: relative;
+    content: "";
+    left: 10;
+    width: 180px;
+}
+.shoes2_text {
+    position: relative;
+    content: "";
+    left: 10;
+    width: 180px;
+}
+.product1 {
+    height: 191;
+    width: 200;
+    position: relative;
+    content: "";
+    left: 100;
+}
+.jeans_pant1_text {
+    position: relative;
+    content: "";
+    left: 100;
+    width: 200px;
+}
+.product2 {
+    height: 191;
+    width: 200;
+    position: relative;
+    content: "";
+    left: 100;
+}
+}
+.product {
+    height: 190;
+    width: 220;
+}
+.product3 {
+    width: 220;
+}
+.product4 {
+    width: 220;
+}
+.product5 {
+    width: 220;
+}
+.product6 {
+    width: 242;
+    height: 220;
+}
+@media screen and (max-width:900px) {
+    .product3 {
+        position: relative;
+        content: "";
+        left: 100;
+        width: 200;
+        height: 220;
+    }
+    .product6 {
+        position: relative;
+        content: "";
+        left: 100;
+        width: 200;
+        height: 220;
+    }
+    .product_5_text {
+        position: relative;
+        content: "";
+        right: 100;
+    }
+    .product_4_text {
+        position: relative;
+        content: "";
+        right: 100;
+    }
+    .product_3_text {
+        position: relative;
+        content: "";
+        left: 100;
+    }
+}
+</style>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><img src="Images/logo.png" alt="" class="c"></a>
+        <input type="checkbox" id="side-menu" class="side-menu">
+        <label for="side-menu" class="hamb"><span class="hamb-line"></span></label>
+        <nav class="nav">
+        <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Why Us</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+        </ul>
+        </nav>
+</header>
+
+<script>
+    const hamburgerMenu = document.querySelector(".hamburger-menu");
+const nav = document.querySelector(".nav");
+
+hamburgerMenu.addEventListener("click", () => {
+    nav.classList.toggle("active")
+});
+</script>
+<div class="hero_section_image">
+<img src="Images/header_image.jpg" alt="" class="header_image">
+</div>
+<div class="hero_section_text">
+<div class="text">
+<h1>Raining Offers for hot Summer!</h1>
+<h3>25% Off for all products</h3>
+</div>
+<div class="buttons">
+    <button type="button" style="height: 60; width: 290;">ShopNow</button>
+</div>
+</div>
+<div class="box_container">
+<div class="container">
+<img src="Images/shopping_add1.jpg" alt="" style="height: 100%;" width="100%">
+<div></div>
+</div>
+<div class="container">
+    <img src="Images/shopping_add2.jpg" alt="" style="height: 100%;" width="100%">
+    <div></div> 
+    </div>
+    <div class="container">
+        <img src="Images/shopping_add3.jpg" alt="" style="height: 100%; width: 100%;">
+        <div></div>
+        </div>
+</div>
+<div class="box_container_text">
+<div class="container_text">
+    <h2>20% Off on Tank Tops</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit. Proin ac dictum.</p>
+<br>
+    <button type="button" style="height: 60; width: 290;">ShopNow</button>
+</div>
+<div class="container_text1">
+    <h2>Latest Eyewear For You</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit. Proin ac dictum.</p>
+<br>
+    <button type="button" style="height: 60; width: 290;">ShopNow</button>
+</div>
+<div class="container_text2">
+    <h2>Latest Eyewear For You</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit. Proin ac dictum.</p>
+<br>
+    <button type="button" style="height: 60; width: 290;">ShopNow</button>
+</div>
+</div>
+<div class="featured_projects">
+<div class="items">
+<a href="cart.html"><img src="Images/sports_shoes1.jpg" alt="" class="product"></a>
+<div class= "shoes1_text">
+    <h2>DNK Yellow Shoes</h2>
+    <center>
+        <p>Men</p>
+        <p>Rs120</p>
+    </center>
+    
+</div>
+</div>
+<div class="items">
+    <img src="Images/jeans_pant1.jpg" alt="" class="product1">
+    <div class="jeans_pant1_text">
+        <h2>Dark Brown Jeans</h2>
+        <center>
+            <p>Men</p>
+            <p>Rs170</p>
+        </center>
+    </div>
+    </div>
+    <div class="items">
+        <img src="Images/sports_shoes2.jpg" alt="" class="product">
+        <div class="shoes2_text">
+            <h2>DNK Blue Shoes</h2>
+            <center>
+                <p>Men</p>
+                <p>Rs220</p>
+            </center>
+        </div>
+        </div>
+        <div class="items">
+            <img src="Images/jeans_pant2.jpg" alt="" class="product2">
+            <div class="jeans_pant1_text">
+                <h2>Blue Denim Jeans</h2>
+                <center>
+                    <p>Men</p>
+                    <p>Rs620</p>
+                </center>
+                </div>
+            </div>
+            <div class="items">
+                <img src="Images/jeans_pant1.jpg" alt="" class="product4">
+                <div class="jeans_pant1_text">
+                        <div class="product_4_text">
+                            <center>
+                                <h2>Dark Brown Jeans</h2>
+                                <p>Men</p>
+                                <p>Rs820</p>
+                            </center>
+                        </div> 
+                </div>
+                </div>
+                <div class="items">
+                    <img src="Images/sports_shoes2.jpg" alt="" class="product3">
+                    <div class="shoes2_text">
+                       
+                   
+                            <div class="product_3_text">
+                                <center>
+                                    <h2>DNK Blue Shoes</h2>
+                                <p>Men</p>
+                                <p>Rs620</p>
+                            </center>
+                            </div>
+                           
+                    
+                    </div>
+                    </div>
+                    <div class="items">
+                        <img src="Images/jeans_pant2.jpg" alt="" class="product5">
+                        <div class="jeans_pant1_text">
+                                <div class="product_5_text">
+                                    <center>
+                                        <h2>Blue Denim Jeans</h2>
+                                    <p>Men</p>
+                                    <p>Rs720</p>
+                                </center>
+                                </div>
+                               
+                            </div>
+                        </div>
+                        <div class="items">
+                            <img src="Images/jeans_pant2.jpg" alt="" class="product6">
+                            <div class="jeans_pant1_text">
+                                <h2>Blue Denim Jeans</h2>
+                                <center>
+                                    <p>Men</p>
+                                    <p>Rs720</p>
+                                </center>
+                                </div>
+                            </div>
+</div>
+</body>
+</html>
