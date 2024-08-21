@@ -265,119 +265,142 @@ body:has(.side-menu:checked) {
     top: 720;
 }
 }
-.items {
-    float: left;
-    padding: 5px;
-    width: 260px;
-    position: relative;
+.featured_products {
+    position: absolute;
     content: "";
-    right: 90;
+    top: 1200;
+    left: 180;
+}
+.featured_products_items {
+    float: left;
+    width: 190px;
+    margin: 3;
+}
+@media screen and (max-width: 800px) {
+    .featured_products_items {
+    float: left;
+    width: 190px;
+    margin: 3;
+} 
+.featured_products {
+    position: absolute;
+    content: "";
+    top: 1800;
+    left: 10;
+}
+}
+.featured_products_items1 {
+    height: 150px;
+    width: 100%;
+}
+.featured_products_items2 {
+    height: 150px;
+    width: 100%;
+}
+.featured_products_items3 {
+    height: 150px;
+    width: 100%;
+}
+.featured_products_items4 {
+    height: 150px;
+    width: 100%;
+}
+.featured_products_items5 {
+    height: 150px;
+    width: 100%;
+}
+.special_edition_content {
+    height: 300px;
+    width: 100%;
+    border: 2px solid;
+    background-color: rgb(240, 236, 157);
     
 }
-.product1 {
-    height: 191;
-    width: 215;
+.special_edition {
+    position: relative;
+    content: "";
+    top: 1600;
 }
-.product2 {
-    height: 191;
-    width: 244;
+.special_edition_content_image {
+    height: 340px;
 }
-.featured_projects {
-    position:absolute;
-    top: 1200;
-    left: 200;
+.special_edition__text {
+    position: absolute;
+    content: "";
+    bottom: 120;
+    left: 220;
+    color: rgb(0, 0, 0);
 }
-@media screen and (max-width:900px) {
-    .items {
+@media screen and (max-width: 900px) {
+    .special_edition_content {
+    height: 500px;
+    width: 100%;
+    border: 2px solid;
+    background-color: rgb(240, 236, 157);
+   position: absolute;
+   content: "";
+   top: 1200; 
+}
+.special_edition_content_image {
+    height: 540px;
+}
+.special_edition__text {
+    position: absolute;
+    content: "";
+    bottom: 120;
+    left: 30;
+    color: rgb(255, 255, 255);
+}
+}
+.about_brand_content {
     float: left;
-    width: 101px;
-    position: relative;
-    right: 200;
-    font-size: small;
-    text-align: center;
-    top: 600;
-  
+    width: 300px;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-.shoes1_text {
+.about_brand {
     position: relative;
-    content: "";
-    left: 10;
-    width: 180px;
+    top: 1700;
 }
-.shoes2_text {
+@media screen and (max-width: 900px) {
+    .about_brand_content {
+    float: left;
+    width: 400px;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.about_brand {
     position: relative;
-    content: "";
-    left: 10;
-    width: 180px;
+    top: 3400;
 }
-.product1 {
-    height: 191;
-    width: 200;
+}
+.category_1_dress {
     position: relative;
     content: "";
-    left: 100;
+    top: 1800;
+    width: 420px;
+    float: left;
+    padding: 10px;
+    background-color: yellow;
+    height: 150px;
 }
-.jeans_pant1_text {
+.footer_logo {
+    height: 130px;
+}
+@media screen and (max-width: 900px) {
+    .category_1_dress {
     position: relative;
     content: "";
-    left: 100;
-    width: 200px;
+    top: 3420;
+    width: 132.9px;
+    float: left;
+    padding: 10px;
+    background-color: yellow;
+    height: 253px;
 }
-.product2 {
-    height: 191;
-    width: 200;
-    position: relative;
-    content: "";
-    left: 100;
+.footer_logo {
+    height: 60px;
 }
-}
-.product {
-    height: 190;
-    width: 220;
-}
-.product3 {
-    width: 220;
-}
-.product4 {
-    width: 220;
-}
-.product5 {
-    width: 220;
-}
-.product6 {
-    width: 242;
-    height: 220;
-}
-@media screen and (max-width:900px) {
-    .product3 {
-        position: relative;
-        content: "";
-        left: 100;
-        width: 200;
-        height: 220;
-    }
-    .product6 {
-        position: relative;
-        content: "";
-        left: 100;
-        width: 200;
-        height: 220;
-    }
-    .product_5_text {
-        position: relative;
-        content: "";
-        right: 100;
-    }
-    .product_4_text {
-        position: relative;
-        content: "";
-        right: 100;
-    }
-    .product_3_text {
-        position: relative;
-        content: "";
-        left: 100;
-    }
 }
 </style>
 <body>
@@ -387,12 +410,12 @@ body:has(.side-menu:checked) {
         <label for="side-menu" class="hamb"><span class="hamb-line"></span></label>
         <nav class="nav">
         <ul class="menu">
-        <li><a href="#">Home</a></li>
+        <li><a href="#">Everything</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Accessories</a></li>
         <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Why Us</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#">ContactUs</a></li>
         </ul>
         </nav>
 </header>
@@ -451,99 +474,110 @@ hamburgerMenu.addEventListener("click", () => {
     <button type="button" style="height: 60; width: 290;">ShopNow</button>
 </div>
 </div>
-<div class="featured_projects">
-<div class="items">
-<a href="cart.html"><img src="Images/sports_shoes1.jpg" alt="" class="product"></a>
-<div class= "shoes1_text">
-    <h2>DNK Yellow Shoes</h2>
-    <center>
-        <p>Men</p>
-        <p>Rs120</p>
-    </center>
-    
+<div class="featured_products">
+<div class="featured_products_items">
+<a href="cart.html"><img src="Images/sports_shoes1.jpg" alt="" class="featured_products_items1"></a>
+<h4>DNK Yellow Shoes</h4>
+<p>₹120.00</p>
 </div>
-</div>
-<div class="items">
-    <img src="Images/jeans_pant1.jpg" alt="" class="product1">
-    <div class="jeans_pant1_text">
-        <h2>Dark Brown Jeans</h2>
-        <center>
-            <p>Men</p>
-            <p>Rs170</p>
-        </center>
+<div class="featured_products_items">
+    <img src="Images/sports_shoes2.jpg" alt="" class="featured_products_items2">
+    <h4>DNK Yellow Shoes</h4>
+    <p>₹120.00</p>
     </div>
-    </div>
-    <div class="items">
-        <img src="Images/sports_shoes2.jpg" alt="" class="product">
-        <div class="shoes2_text">
-            <h2>DNK Blue Shoes</h2>
-            <center>
-                <p>Men</p>
-                <p>Rs220</p>
-            </center>
+    <div class="featured_products_items">
+        <img src="Images/jeans_pant1.jpg" alt="" class="featured_products_items3">
+        <h4>DNK Yellow Shoes</h4>
+        <p>₹120.00</p>
         </div>
-        </div>
-        <div class="items">
-            <img src="Images/jeans_pant2.jpg" alt="" class="product2">
-            <div class="jeans_pant1_text">
-                <h2>Blue Denim Jeans</h2>
-                <center>
-                    <p>Men</p>
-                    <p>Rs620</p>
-                </center>
-                </div>
+        <div class="featured_products_items">
+            <img src="Images/jeans_pant2.jpg" alt="" class="featured_products_items4">
+            <h4>DNK Yellow Shoes</h4>
+            <p>₹120.00</p>
             </div>
-            <div class="items">
-                <img src="Images/jeans_pant1.jpg" alt="" class="product4">
-                <div class="jeans_pant1_text">
-                        <div class="product_4_text">
-                            <center>
-                                <h2>Dark Brown Jeans</h2>
-                                <p>Men</p>
-                                <p>Rs820</p>
-                            </center>
-                        </div> 
+            <div class="featured_products_items">
+                <img src="Images/jeans_pant3.jpg" alt="" class="featured_products_items5">
+                <h4>DNK Yellow Shoes</h4>
+                <p>₹120.00</p>
                 </div>
-                </div>
-                <div class="items">
-                    <img src="Images/sports_shoes2.jpg" alt="" class="product3">
-                    <div class="shoes2_text">
-                       
-                   
-                            <div class="product_3_text">
-                                <center>
-                                    <h2>DNK Blue Shoes</h2>
-                                <p>Men</p>
-                                <p>Rs620</p>
-                            </center>
-                            </div>
-                           
-                    
+                <br>
+                <div class="featured_products_items">
+                    <img src="Images/jeans_pant4.jpg" alt="" class="featured_products_items5">
+                    <h4>DNK Yellow Shoes</h4>
+                    <p>₹120.00</p>
                     </div>
-                    </div>
-                    <div class="items">
-                        <img src="Images/jeans_pant2.jpg" alt="" class="product5">
-                        <div class="jeans_pant1_text">
-                                <div class="product_5_text">
-                                    <center>
-                                        <h2>Blue Denim Jeans</h2>
-                                    <p>Men</p>
-                                    <p>Rs720</p>
-                                </center>
-                                </div>
-                               
-                            </div>
+                    <div class="featured_products_items">
+                        <img src="Images/bracelite.jpg" alt="" class="featured_products_items5">
+                        <h4>DNK Yellow Shoes</h4>
+                        <p>₹120.00</p>
                         </div>
-                        <div class="items">
-                            <img src="Images/jeans_pant2.jpg" alt="" class="product6">
-                            <div class="jeans_pant1_text">
-                                <h2>Blue Denim Jeans</h2>
-                                <center>
-                                    <p>Men</p>
-                                    <p>Rs720</p>
-                                </center>
-                                </div>
+                        <div class="featured_products_items">
+                            <img src="Images/brownpurse.jpg" alt="" class="featured_products_items5">
+                            <h4>DNK Yellow Shoes</h4>
+                            <p>₹120.00</p>
                             </div>
+                            <div class="featured_products_items">
+                                <img src="Images/redbag.jpg" alt="" class="featured_products_items5">
+                                <h4>DNK Yellow Shoes</h4>
+                                <p>₹120.00</p>
+                                </div>
+                                <div class="featured_products_items">
+                                    <img src="Images/handbag.jpg" alt="" class="featured_products_items5">
+                                    <h4>DNK Yellow Shoes</h4>
+                                    <p>₹120.00</p>
+                                    </div>
 </div>
+<div class="special_edition">
+<div class="special_edition_content">
+<img src="Images/specialedition.png" alt="" class="special_edition_content_image">
+<div class="special_edition__text">
+<div>
+    <h3>Limited Time Offer</h3>
+    <h1>SpecialEdition</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus <br> nec ullamcorper mattis, pulvinar dapibus leo.</p>
+<h3>Buy This T-shirt At 20% Discount, Use Code OFF20</h3>
+</div>
+</div>
+</div>
+</div>
+<div class="about_brand">
+<div class="about_brand_content">
+<h4>WorldWideShipping</h4>
+<p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+</p>
+</div>
+<div class="about_brand_content">
+    <h4>BestQuality</h4>
+    <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+    </div>
+    <div class="about_brand_content">
+        <h4>BestOffers</h4>
+        <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. </p>
+        </div>
+        <div class="about_brand_content">
+        <h4>SecurePayments</h4>
+        <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. </p>
+        </div>
+</div>
+<footer>
+    <div class="category_1">
+        <div class="category_1_dress">
+            <p>Women Jeans</p>
+            <p>Tops and Shirts</p>
+            <p>Women Jackets</p>
+            <p>Heels and Flats</p>
+            <p>Women Accessories</p>
+        </div>
+        <div class="category_1_dress">
+            <p>Men Jeans</p>
+            <p>Men Shirts</p>
+            <p>MenShoes</p>
+            <p>Men Accessories</p>
+        </div>
+        <div class="category_1_dress">
+         <img src="Images/logo.png" alt="" class="footer_logo">
+        </div>
+    </div>
+</footer>
 </body>
 </html>
