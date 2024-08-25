@@ -1,18 +1,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E Commerce Web Store</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-
+    <!-- App title -->
+    <title>E-commerce Website</title>
+    <!-- Link CSS file -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <style>
- @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-  :root{
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"); /* import font */
+
+:root{
     --white: #f9f9f9;
-    --black: rgb(17, 17, 17);
-    --purple: rgb(240, 240, 111);
-}
+    --yellow: #eded20;
+    --gray: #85888C;
+} /* variables*/
+
 
 *{
     margin: 0;
@@ -30,40 +34,42 @@ ul{
     list-style: none;
 }
 .header{
-  background-color: rgb(240, 240, 111);
+    background-color: var(--yellow);
     box-shadow: 1px 1px 5px 0px var(--gray);
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
 }
+/* Logo */
 .logo{
     display: inline-block;
-    color: var(--white);
+    color: var(--yellow);
     font-size: 60px;
     margin-left: 10px;
 }
+/* Nav menu */
 .nav{
     width: 100%;
     height: 100%;
     position: fixed;
-    background-color: var(--purple);
+    background-color: var(--yellow);
     overflow: hidden;
-
+    z-index: 1000;
 }
 .menu a{
     display: block;
     padding: 30px;
-    color: rgb(169, 186, 17);
-    color: white;
+    color: var(--white);
 }
 .menu a:hover{
-    background-color: rgb(0, 0, 0);
+    background-color: var(--yellow);
 }
 .nav{
     max-height: 0;
     transition: max-height .5s ease-out;
 }
+
 .hamb{
     cursor: pointer;
     float: right;
@@ -77,7 +83,7 @@ ul{
     position: relative;
     width: 24px;
 
-}
+} 
 
 .hamb-line::before,
 .hamb-line::after{
@@ -98,7 +104,7 @@ ul{
 
 .side-menu {
     display: none;
-}
+} 
 .side-menu:checked ~ nav{
     max-height: 100%;
 }
@@ -125,145 +131,173 @@ body:has(.side-menu:checked) {
         float: right;
         width: fit-content;
         background-color: transparent;
+        z-index: 1000;
     }
     .menu li{
         float: left;
     }
     .menu a:hover{
         background-color: transparent;
-        color: var(--purple);
+        color: var(--gray);
 
     }
+
     .hamb{
         display: none;
     }
 }
-.c {
-  height: 90;
-  padding: 10px;
-}
-.header_image {
+.hero_section_image {
     width: 100%;
     height: 500px;
     position: absolute;
-    top: 100;
+    top: 50;
+
 }
-@media screen and (max-width:600px) {
-    .header_image {
-    width: 100%;
+@media screen and (max-width: 800px) {
+    .hero_section_image {
+        width: 100%;
     height: 500px;
     position: absolute;
-    top: 100;
+    top: 50;
 } 
 }
-.text {
-    position: absolute;
-    content: "";
-    color: rgb(255, 255, 255);
-    top: 300;
-    font-size: x-large;
-    margin: 12;
-}
-@media screen and (max-width:600px) {
-    .text {
-    position: absolute;
-    content: "";
-    color: rgb(255, 255, 255);
-    top: 150;
-    font-size: x-large;
-}
-}
-.buttons {
+.hero_section_text {
     position: relative;
     content: "";
-    top: 440;
-    margin: 12
-}
-@media screen and (max-width:600px) {
-    .buttons {
-    position: relative;
-    content: "";
-    top: 430;
-    cursor: pointer;
-}  
-}
-.container {
-    border: 2px solid rgb(242, 242, 89);
-    height: 440;
-    width: 360;
-    float: left;
-    padding: 10px;
-    margin: 4;
-}
-.box_container {
-    position: absolute;
-    content: "";
-    top: 640;
-    left: 140;
-}
-@media screen and (max-width:600px) {
-    .box_container {
-    position: absolute;
-    content: "";
-    top: 640;
-    left: 10;
-}  
-}
-@media screen and (max-width:600px) {
-    .container {
-    width: 99%;
-    height: 360px;
-}  
-}
-.box_container_text {
-    position: absolute;
-    content: "";
-    top: 890;
-    left: 160;
-    cursor: pointer;
-    color: #f9f9f9;
-    padding: 10px;
-}
-@media screen and (max-width:600px) {
-    .box_container_text {
-    position: absolute;
-    content: "";
-    top: 800;
-    left: 50;
-    padding: 5px;
-}   
-}
-.container_text1 {
-    color: rgb(255, 255, 255);
-    position: absolute;
-    content: "";
-    left: 400;
-    bottom: 10;
-}
-@media screen and (max-width:600px) {
-    .container_text1 {
-    color: rgb(255, 255, 255);
-    position: relative;
-    content: "";
-    left: 10;
     top: 200;
+    font-size: xx-large;
+    color: aliceblue;
 }
+@media screen and (max-width: 800px) {
+    .hero_section_text {
+    position: relative;
+    content: "";
+    top: 200;
+    font-size: x-large;
+    color: aliceblue;
+} 
 }
-.container_text2 {
-    color: rgb(255, 255, 255);
+.button {
     position: absolute;
     content: "";
-    left: 750;
-    bottom: 10;
+    bottom: 210;
 }
-@media screen and (max-width:600px) {
-    .container_text2 {
-    color: rgb(255, 255, 255);
+@media screen and (max-width: 800px) {
+    .button {
+    position: relative;
+    content: "";
+    top: 220;
+} 
+}
+.offers_section_image {
+    float: left;
+    width: 330px;
+    position: relative;
+    content: "";
+    top: 480;
+    margin: 12;
+    padding: 20px;
+    left: 100;
+}
+
+@media screen and (max-width: 800px) {
+    .offers_section_image {
+    position: relative;
+    content: "";
+    top: 400;
+    left: -10;
+} 
+.shopping_add2 {
+position: relative;
+content: "";
+bottom: 40;
+}
+.shopping_add3 {
+position: relative;
+content: "";
+bottom: 77;
+}
+}
+.shopping_add1 {
+   width: 330px;
+    height: 400px;
+}
+.shopping_add2 {
+   width: 330px;
+    height: 400px;
+}
+.shopping_add3 {
+   width: 330px;
+    height: 400px;
+}
+@media screen and (max-width: 800px) {
+    .shopping_add1 {
+   width: 347.6px;
+    height: 200px;
+}
+.shopping_add2 {
+   width: 347.6px;
+    height: 200px;
+}
+.shopping_add3 {
+   width: 347.6px;
+    height: 200px;
+}
+}
+.offers_section_image_text {
     position: absolute;
     content: "";
-    left: 10;
-    top: 720;
+    font-size: small;
+    left: 140;
+    top: 860;
+    color: white;
+  
 }
+@media screen and (max-width: 800px) {
+    .offers_section_image_text {
+    position: absolute;
+    content: "";
+    font-size: small;
+    left: 40;
+    top: 690;
+    color: white;
+}  
+}
+.offers_section_image_text1 {
+    position: absolute;
+    content: "";
+    font-size: small;
+    left: 492;
+    top: 860;
+    color: white; 
+}
+@media screen and (max-width: 800px) {
+    .offers_section_image_text1 {
+    position: absolute;
+    content: "";
+    font-size: small;
+    left: 42;
+    top: 930;
+    color: white; 
+}
+}
+.offers_section_image_text2 {
+    position: absolute;
+    content: "";
+    font-size: small;
+    left: 842;
+    top: 860;
+    color: white; 
+}
+@media screen and (max-width: 800px) {
+    .offers_section_image_text2 {
+    position: absolute;
+    content: "";
+    font-size: small;
+    left: 42;
+    top: 1150;
+    color: white; 
+}   
 }
 .featured_products {
     position: absolute;
@@ -275,19 +309,6 @@ body:has(.side-menu:checked) {
     float: left;
     width: 190px;
     margin: 3;
-}
-@media screen and (max-width: 800px) {
-    .featured_products_items {
-    float: left;
-    width: 190px;
-    margin: 3;
-} 
-.featured_products {
-    position: absolute;
-    content: "";
-    top: 1800;
-    left: 10;
-}
 }
 .featured_products_items1 {
     height: 150px;
@@ -309,6 +330,19 @@ body:has(.side-menu:checked) {
     height: 150px;
     width: 100%;
 }
+@media screen and (max-width: 800px) {
+    .featured_products_items {
+    float: left;
+    width: 150px;
+   
+} 
+.featured_products {
+    position: absolute;
+    content: "";
+    top: 1300;
+    left: 40;
+}
+}
 .special_edition_content {
     height: 300px;
     width: 100%;
@@ -323,6 +357,9 @@ body:has(.side-menu:checked) {
 }
 .special_edition_content_image {
     height: 340px;
+    position: relative;
+    content: "";
+    right: 1100;
 }
 .special_edition__text {
     position: absolute;
@@ -335,49 +372,51 @@ body:has(.side-menu:checked) {
     .special_edition_content {
     height: 500px;
     width: 100%;
-    border: 2px solid;
     background-color: rgb(240, 236, 157);
    position: absolute;
    content: "";
-   top: 1200; 
+   top: 590; 
 }
 .special_edition_content_image {
-    height: 540px;
+    height: 340px;
+    position: relative;
+    content: "";
+    right: 10;
 }
 .special_edition__text {
     position: absolute;
     content: "";
-    bottom: 120;
-    left: 30;
+    bottom: 150;
+    left: 10;
     color: rgb(255, 255, 255);
 }
 }
 .about_brand_content {
     float: left;
-    width: 300px;
+    width: 100%;
     padding: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .about_brand {
     position: relative;
-    top: 1700;
+    top: 1500;
 }
 @media screen and (max-width: 900px) {
     .about_brand_content {
     float: left;
-    width: 400px;
+    width: 370px;
     padding: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .about_brand {
     position: relative;
-    top: 3400;
+    top: 1910;
 }
 }
 .category_1_dress {
     position: relative;
     content: "";
-    top: 1800;
+    top: 1580;
     width: 420px;
     float: left;
     padding: 10px;
@@ -391,193 +430,177 @@ body:has(.side-menu:checked) {
     .category_1_dress {
     position: relative;
     content: "";
-    top: 3420;
-    width: 132.9px;
+    top:1920;
+    width: 122.9px;
     float: left;
-    padding: 10px;
+    height: 300px;
     background-color: yellow;
-    height: 253px;
+   
 }
 .footer_logo {
-    height: 60px;
+    height: 70px;
+    position: absolute;
+    content: "";
+    right: -10;
 }
 }
 </style>
 <body>
     <header class="header">
-        <a href="#" class="logo"><img src="Images/logo.png" alt="" class="c"></a>
-        <input type="checkbox" id="side-menu" class="side-menu">
-        <label for="side-menu" class="hamb"><span class="hamb-line"></span></label>
+
+        <a href="#" class="logo">LR</a>
+     
+        <input class="side-menu" type="checkbox" id="side-menu"/>
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+   
         <nav class="nav">
-        <ul class="menu">
-        <li><a href="#">Everything</a></li>
-        <li><a href="#">Women</a></li>
-        <li><a href="#">Men</a></li>
-        <li><a href="#">Accessories</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">ContactUs</a></li>
-        </ul>
+            <ul class="menu">
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Blog</a> </li>
+                <li><a href="#">About</a></li>
+            </ul>
         </nav>
-</header>
-
-<script>
-    const hamburgerMenu = document.querySelector(".hamburger-menu");
-const nav = document.querySelector(".nav");
-
-hamburgerMenu.addEventListener("click", () => {
-    nav.classList.toggle("active")
-});
-</script>
+    </header>
+    <!-- Main content -->
+    <div class="hero_section">
 <div class="hero_section_image">
-<img src="Images/header_image.jpg" alt="" class="header_image">
+<img src="Images/header_image.jpg" alt="" class="hero_section_image">
 </div>
 <div class="hero_section_text">
-<div class="text">
-<h1>Raining Offers for hot Summer!</h1>
-<h3>25% Off for all products</h3>
+<h2>Raining Offers for hot summer</h2>
+<p>25% off for all products</p>
 </div>
-<div class="buttons">
+<div class="button">
     <button type="button" style="height: 60; width: 290;">ShopNow</button>
 </div>
-</div>
-<div class="box_container">
-<div class="container">
-<img src="Images/shopping_add1.jpg" alt="" style="height: 100%;" width="100%">
-<div></div>
-</div>
-<div class="container">
-    <img src="Images/shopping_add2.jpg" alt="" style="height: 100%;" width="100%">
-    <div></div> 
     </div>
-    <div class="container">
-        <img src="Images/shopping_add3.jpg" alt="" style="height: 100%; width: 100%;">
-        <div></div>
+    <div class="offers_section">
+<div class="offers_section_image">
+<img src="Images/shopping_add1.jpg" alt="" class="shopping_add1">
+</div>
+<div class="offers_section_image">
+    <img src="Images/shopping_add2.jpg" alt="" class="shopping_add2">
+    </div>
+    <div class="offers_section_image">
+        <img src="Images/shopping_add3.jpg" alt="" class="shopping_add3">
         </div>
+        <div class="offers_section_image_text">
+<h1>20% Off on Tank Tops</h1>
+   <h3>Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit. Proin ac dictum.</h3>    
 </div>
-<div class="box_container_text">
-<div class="container_text">
-    <h2>20% Off on Tank Tops</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit. Proin ac dictum.</p>
-<br>
-    <button type="button" style="height: 60; width: 290;">ShopNow</button>
-</div>
-<div class="container_text1">
-    <h2>Latest Eyewear For You</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit. Proin ac dictum.</p>
-<br>
-    <button type="button" style="height: 60; width: 290;">ShopNow</button>
-</div>
-<div class="container_text2">
-    <h2>Latest Eyewear For You</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit. Proin ac dictum.</p>
-<br>
-    <button type="button" style="height: 60; width: 290;">ShopNow</button>
-</div>
-</div>
-<div class="featured_products">
-<div class="featured_products_items">
-<a href="cart.html"><img src="Images/sports_shoes1.jpg" alt="" class="featured_products_items1"></a>
-<h4>DNK Yellow Shoes</h4>
-<p>₹120.00</p>
-</div>
-<div class="featured_products_items">
-    <img src="Images/sports_shoes2.jpg" alt="" class="featured_products_items2">
-    <h4>DNK Yellow Shoes</h4>
-    <p>₹120.00</p>
+<div class="offers_section_image_text1">
+    <h1>20% Off on Tank Tops</h1>
+       <h3>Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit. Proin ac dictum.</h3>    
     </div>
-    <div class="featured_products_items">
-        <img src="Images/jeans_pant1.jpg" alt="" class="featured_products_items3">
+    <div class="offers_section_image_text2">
+        <h1>20% Off on Tank Tops</h1>
+           <h3>Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit. Proin ac dictum.</h3>    
+        </div>
+    </div>
+    <div class="featured_products">
+        <div class="featured_products_items">
+        <a href="cart.html"><img src="Images/sports_shoes1.jpg" alt="" class="featured_products_items1"></a>
         <h4>DNK Yellow Shoes</h4>
         <p>₹120.00</p>
         </div>
         <div class="featured_products_items">
-            <img src="Images/jeans_pant2.jpg" alt="" class="featured_products_items4">
+            <img src="Images/sports_shoes2.jpg" alt="" class="featured_products_items2">
             <h4>DNK Yellow Shoes</h4>
             <p>₹120.00</p>
             </div>
             <div class="featured_products_items">
-                <img src="Images/jeans_pant3.jpg" alt="" class="featured_products_items5">
+                <img src="Images/jeans_pant1.jpg" alt="" class="featured_products_items3">
                 <h4>DNK Yellow Shoes</h4>
                 <p>₹120.00</p>
                 </div>
-                <br>
                 <div class="featured_products_items">
-                    <img src="Images/jeans_pant4.jpg" alt="" class="featured_products_items5">
+                    <img src="Images/jeans_pant2.jpg" alt="" class="featured_products_items4">
                     <h4>DNK Yellow Shoes</h4>
                     <p>₹120.00</p>
                     </div>
                     <div class="featured_products_items">
-                        <img src="Images/bracelite.jpg" alt="" class="featured_products_items5">
+                        <img src="Images/jeans_pant3.jpg" alt="" class="featured_products_items5">
                         <h4>DNK Yellow Shoes</h4>
                         <p>₹120.00</p>
                         </div>
+                        <br>
                         <div class="featured_products_items">
-                            <img src="Images/brownpurse.jpg" alt="" class="featured_products_items5">
+                            <img src="Images/jeans_pant9.jpg" alt="" class="featured_products_items5">
                             <h4>DNK Yellow Shoes</h4>
                             <p>₹120.00</p>
                             </div>
                             <div class="featured_products_items">
-                                <img src="Images/redbag.jpg" alt="" class="featured_products_items5">
+                                <img src="Images/bracelite.jpg" alt="" class="featured_products_items5">
                                 <h4>DNK Yellow Shoes</h4>
                                 <p>₹120.00</p>
                                 </div>
                                 <div class="featured_products_items">
-                                    <img src="Images/handbag.jpg" alt="" class="featured_products_items5">
+                                    <img src="Images/brownpurse.jpg" alt="" class="featured_products_items5">
                                     <h4>DNK Yellow Shoes</h4>
                                     <p>₹120.00</p>
                                     </div>
-</div>
-<div class="special_edition">
-<div class="special_edition_content">
-<img src="Images/specialedition.png" alt="" class="special_edition_content_image">
-<div class="special_edition__text">
-<div>
-    <h3>Limited Time Offer</h3>
-    <h1>SpecialEdition</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus <br> nec ullamcorper mattis, pulvinar dapibus leo.</p>
-<h3>Buy This T-shirt At 20% Discount, Use Code OFF20</h3>
-</div>
-</div>
-</div>
-</div>
-<div class="about_brand">
-<div class="about_brand_content">
-<h4>WorldWideShipping</h4>
-<p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-</p>
-</div>
-<div class="about_brand_content">
-    <h4>BestQuality</h4>
-    <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-    </div>
-    <div class="about_brand_content">
-        <h4>BestOffers</h4>
-        <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. </p>
+                                    <div class="featured_products_items">
+                                        <img src="Images/redbag.jpg" alt="" class="featured_products_items5">
+                                        <h4>DNK Yellow Shoes</h4>
+                                        <p>₹120.00</p>
+                                        </div>
+                                        <div class="featured_products_items">
+                                            <img src="Images/handbag.jpg" alt="" class="featured_products_items5">
+                                            <h4>DNK Yellow Shoes</h4>
+                                            <p>₹120.00</p>
+                                            </div>
         </div>
-        <div class="about_brand_content">
-        <h4>SecurePayments</h4>
-        <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. </p>
-        </div>
-</div>
-<footer>
-    <div class="category_1">
-        <div class="category_1_dress">
-            <p>Women Jeans</p>
-            <p>Tops and Shirts</p>
-            <p>Women Jackets</p>
-            <p>Heels and Flats</p>
-            <p>Women Accessories</p>
-        </div>
-        <div class="category_1_dress">
-            <p>Men Jeans</p>
-            <p>Men Shirts</p>
-            <p>MenShoes</p>
-            <p>Men Accessories</p>
-        </div>
-        <div class="category_1_dress">
-         <img src="Images/logo.png" alt="" class="footer_logo">
-        </div>
-    </div>
-</footer>
+        <div class="special_edition">
+            <div class="special_edition_content">
+            <img src="Images/specialedition.png" alt="" class="special_edition_content_image">
+            <div class="special_edition__text">
+            <div>
+                <h3>Limited Time Offer</h3>
+                <h1>SpecialEdition</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus <br> nec ullamcorper mattis, pulvinar dapibus leo.</p>
+            <h3>Buy This T-shirt At 20% Discount, Use Code OFF20</h3>
+            </div>
+            </div>
+            </div>
+            </div>
+            <div class="about_brand">
+                <div class="about_brand_content">
+                <h4>WorldWideShipping</h4>
+                <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                </p>
+                </div>
+                <div class="about_brand_content">
+                    <h4>BestQuality</h4>
+                    <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                    </div>
+                    <div class="about_brand_content">
+                        <h4>BestOffers</h4>
+                        <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. </p>
+                        </div>
+                        <div class="about_brand_content">
+                        <h4>SecurePayments</h4>
+                        <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. </p>
+                        </div>
+                </div>
+                <footer>
+                    <div class="category_1">
+                        <div class="category_1_dress">
+                            <p>Women Jeans</p>
+                            <p>Tops and Shirts</p>
+                            <p>Women Jackets</p>
+                            <p>Heels and Flats</p>
+                            <p>Women Accessories</p>
+                        </div>
+                        <div class="category_1_dress">
+                            <p>Men Jeans</p>
+                            <p>Men Shirts</p>
+                            <p>MenShoes</p>
+                            <p>Men Accessories</p>
+                        </div>
+                        <div class="category_1_dress">
+                         <img src="Images/logo.png" alt="" class="footer_logo">
+                        </div>
+                    </div>
+                </footer>
 </body>
 </html>
