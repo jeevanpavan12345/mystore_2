@@ -404,7 +404,7 @@ bottom: 77;
 @media screen and (max-width: 900px) {
     .about_brand_content {
     float: left;
-    width: 370px;
+    width: 403px;
     padding: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -416,7 +416,7 @@ bottom: 77;
 .category_1_dress {
     position: relative;
     content: "";
-    top: 1580;
+    top: 1980;
     width: 420px;
     float: left;
     padding: 10px;
@@ -430,8 +430,8 @@ bottom: 77;
     .category_1_dress {
     position: relative;
     content: "";
-    top:1920;
-    width: 122.9px;
+    top:2140;
+    width: 134px;
     float: left;
     height: 300px;
     background-color: yellow;
@@ -443,6 +443,38 @@ bottom: 77;
     content: "";
     right: -10;
 }
+}
+.slideshow-container {
+    position: absolute;
+    content: "";
+    top: 2380;
+    left: 110;
+}
+@media screen and (max-width: 900px) {
+    .slideshow-container {
+    position: absolute;
+    content: "";
+    top: 3320;
+    left: -10;
+}
+}
+.text1 {
+    position: absolute;
+    content: "";
+    bottom: 200px;
+    left: 200;
+    font-size: xx-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+@media screen and (max-width: 800px) {
+    .text1 {
+    position: absolute;
+    content: "";
+    bottom: 100px;
+    left: 10;
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+} 
 }
 </style>
 <body>
@@ -525,7 +557,7 @@ bottom: 77;
                         </div>
                         <br>
                         <div class="featured_products_items">
-                            <img src="Images/jeans_pant9.jpg" alt="" class="featured_products_items5">
+                            <img src="Images/jeans_pant4.jpg" alt="" class="featured_products_items5">
                             <h4>DNK Yellow Shoes</h4>
                             <p>₹120.00</p>
                             </div>
@@ -550,6 +582,8 @@ bottom: 77;
                                             <p>₹120.00</p>
                                             </div>
         </div>
+
+     
         <div class="special_edition">
             <div class="special_edition_content">
             <img src="Images/specialedition.png" alt="" class="special_edition_content_image">
@@ -582,6 +616,45 @@ bottom: 77;
                         <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. </p>
                         </div>
                 </div>
+                <div class="slideshow-container">
+<div class="mySlides">
+<img src="Images/shopping_ad_1.jpg" alt="" style="width: 100%;">
+<div class="text1">Upto 80% off Via Coupons</div>
+</div>
+<div class="mySlides">
+    <img src="Images/shoping_ad_2.jpg" alt="" style="width: 100%;">
+    </div>
+    <div class="mySlides">
+        <img src="Images/shoping_ad_3.jpg" alt="" style="width: 100%;">
+        </div>
+                </div>
+                <div style="text-align:center">
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                  </div>
+                <script>
+                    let slideIndex = 0;
+                    showSlides();
+                    
+                    function showSlides() {
+                      let i;
+                      let slides = document.getElementsByClassName("mySlides");
+                      let dots = document.getElementsByClassName("dot");
+                      for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";  
+                      }
+                      slideIndex++;
+                      if (slideIndex > slides.length) {slideIndex = 1}    
+                      for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                      }
+                      slides[slideIndex-1].style.display = "block";  
+                      dots[slideIndex-1].className += " active";
+                      setTimeout(showSlides, 2000); // Change image every 2 seconds
+                    }
+                    </script>
+                    <br>
                 <footer>
                     <div class="category_1">
                         <div class="category_1_dress">
