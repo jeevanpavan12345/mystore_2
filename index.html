@@ -4,22 +4,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- App title -->
-    <title>E-commerce Website</title>
+    <title>Shopping Web Store</title>
     <!-- Link CSS file -->
     <link rel="stylesheet" href="style.css">
     <script src="https://www.gstatic.com/charts/loader.js"></script>
-
 </head>
 <style>
-    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"); /* import font */
+    /* Theming */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"); /* import font */
 
 :root{
-
-    --yellow: #eded20;
+    --white: #f9f9f9;
+    --black: #36383F;
     --gray: #85888C;
 } /* variables*/
 
-
+/* Reset */
 *{
     margin: 0;
     padding: 0;
@@ -35,8 +35,9 @@ a{
 ul{
     list-style: none;
 }
+/* Header */
 .header{
-    background-color: var(--yellow);
+    background-color: var(--black);
     box-shadow: 1px 1px 5px 0px var(--gray);
     position: fixed;
     top: 0;
@@ -46,7 +47,7 @@ ul{
 /* Logo */
 .logo{
     display: inline-block;
-    color: var(--yellow);
+    color: var(--white);
     font-size: 60px;
     margin-left: 10px;
 }
@@ -55,9 +56,9 @@ ul{
     width: 100%;
     height: 100%;
     position: fixed;
-    background-color: var(--yellow);
+    background-color: var(--black);
     overflow: hidden;
-    z-index: 1000;
+
 }
 .menu a{
     display: block;
@@ -65,18 +66,18 @@ ul{
     color: var(--white);
 }
 .menu a:hover{
-    background-color: var(--yellow);
+    background-color: var(--gray);
 }
 .nav{
     max-height: 0;
     transition: max-height .5s ease-out;
 }
-
+/* Menu Icon */
 .hamb{
     cursor: pointer;
     float: right;
     padding: 40px 20px;
-}
+}/* Style label tag */
 
 .hamb-line {
     background: var(--white);
@@ -85,7 +86,7 @@ ul{
     position: relative;
     width: 24px;
 
-} 
+} /* Style span tag */
 
 .hamb-line::before,
 .hamb-line::after{
@@ -106,7 +107,8 @@ ul{
 
 .side-menu {
     display: none;
-} 
+} /* Hide checkbox */
+/* Toggle menu icon */
 .side-menu:checked ~ nav{
     max-height: 100%;
 }
@@ -125,6 +127,7 @@ ul{
 body:has(.side-menu:checked) {
   overflow: hidden;
 }
+/* Responsiveness */
 @media (min-width: 768px) {
     .nav{
         max-height: none;
@@ -133,7 +136,6 @@ body:has(.side-menu:checked) {
         float: right;
         width: fit-content;
         background-color: transparent;
-        z-index: 1000;
     }
     .menu li{
         float: left;
@@ -149,361 +151,272 @@ body:has(.side-menu:checked) {
     }
 }
 .hero_section_image {
-    width: 100%;
-    height: 500px;
-    position: absolute;
-    top: 50;
-
+    position: relative;
+    content: "";
+    top: 90;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 670px) {
     .hero_section_image {
-        width: 100%;
-    height: 500px;
-    position: absolute;
-    top: 50;
-} 
-}
-.hero_section_text {
     position: relative;
+    content: "";
+    top: 91;
+    width: 100%;
+}
+}
+.hero_section_image_text {
+    position: absolute;
     content: "";
     top: 200;
-    font-size: xx-large;
-    color: aliceblue;
-}
-@media screen and (max-width: 800px) {
-    .hero_section_text {
-    position: relative;
-    content: "";
-    top: 200;
-    font-size: x-large;
-    color: aliceblue;
-} 
-}
-.button {
-    position: absolute;
-    content: "";
-    bottom: 210;
-}
-@media screen and (max-width: 800px) {
-    .button {
-    position: relative;
-    content: "";
-    top: 220;
-} 
-}
-.offers_section_image {
-    float: left;
-    width: 330px;
-    position: relative;
-    content: "";
-    top: 480;
-    margin: 12;
-    padding: 20px;
-    left: 100;
-}
-
-@media screen and (max-width: 800px) {
-    .offers_section_image {
-    position: relative;
-    content: "";
-    top: 400;
-    left: -10;
-} 
-.shopping_add2 {
-position: relative;
-content: "";
-bottom: 40;
-}
-.shopping_add3 {
-position: relative;
-content: "";
-bottom: 77;
-}
-}
-.shopping_add1 {
-   width: 330px;
-    height: 400px;
-}
-.shopping_add2 {
-   width: 330px;
-    height: 400px;
-}
-.shopping_add3 {
-   width: 330px;
-    height: 400px;
-}
-@media screen and (max-width: 800px) {
-    .shopping_add1 {
-   width: 347.6px;
-    height: 200px;
-}
-.shopping_add2 {
-   width: 347.6px;
-    height: 200px;
-}
-.shopping_add3 {
-   width: 347.6px;
-    height: 200px;
-}
-}
-.offers_section_image_text {
-    position: absolute;
-    content: "";
-    font-size: small;
-    left: 140;
-    top: 860;
     color: white;
-  
 }
-@media screen and (max-width: 800px) {
-    .offers_section_image_text {
+@media screen and (max-width: 670px) {
+    .hero_section_image_text {
     position: absolute;
     content: "";
-    font-size: small;
-    left: 40;
-    top: 690;
+    top: 200;
     color: white;
 }  
 }
-.offers_section_image_text1 {
-    position: absolute;
-    content: "";
-    font-size: small;
-    left: 492;
-    top: 860;
-    color: white; 
+button {
+    width: 100%;
+    height: 50px;
 }
-@media screen and (max-width: 800px) {
-    .offers_section_image_text1 {
-    position: absolute;
-    content: "";
-    font-size: small;
-    left: 42;
-    top: 930;
-    color: white; 
-}
-}
-.offers_section_image_text2 {
-    position: absolute;
-    content: "";
-    font-size: small;
-    left: 842;
-    top: 860;
-    color: white; 
-}
-@media screen and (max-width: 800px) {
-    .offers_section_image_text2 {
-    position: absolute;
-    content: "";
-    font-size: small;
-    left: 42;
-    top: 1150;
-    color: white; 
-}   
-}
-.featured_products {
-    position: absolute;
-    content: "";
-    top: 1200;
-    left: 180;
-}
-.featured_products_items {
+.tank_tops_images {
+    width: 300px;
     float: left;
-    width: 190px;
-    margin: 3;
+    position: relative;
+    margin: 2;
+    top: 100;
+    left: 200;
 }
-.featured_products_items1 {
-    height: 150px;
-    width: 100%;
-}
-.featured_products_items2 {
-    height: 150px;
-    width: 100%;
-}
-.featured_products_items3 {
-    height: 150px;
-    width: 100%;
-}
-.featured_products_items4 {
-    height: 150px;
-    width: 100%;
-}
-.featured_products_items5 {
-    height: 150px;
-    width: 100%;
-}
-@media screen and (max-width: 800px) {
-    .featured_products_items {
-    float: left;
-    width: 150px;
-   
-} 
-.featured_products {
-    position: absolute;
-    content: "";
-    top: 1300;
+@media screen and (max-width: 670px) {
+    .tank_tops_images {
+    width: 300px;
+    position: relative;
+    margin: 2;
+    top: 100;
     left: 40;
 }
+
 }
-.special_edition_content {
-    height: 300px;
-    width: 100%;
-    border: 2px solid;
-    background-color: rgb(240, 236, 157);
+.tank_tops_images_text {
+    position: absolute;
+    content: "";
+    color: white;
+    font-size: small;
+    top: 650;
+    left: 210;
+}
+@media screen and (max-width: 670px) {
+    .tank_tops_images_text {
+    position: absolute;
+    content: "";
+    color: white;
+    font-size: small;
+    top: 650;
+    left: 55;
+}
+}
+.tank_tops_images_text_1 {
+    position: absolute;
+    content: "";
+    color: white;
+    font-size: small;
+    top: 650;
+    left: 520;
+}
+@media screen and (max-width: 670px) {
+    .tank_tops_images_text_1 {
+    position: absolute;
+    content: "";
+    color: white;
+    font-size: small;
+    top: 950;
+    left: 55;
+}
+}
+.tank_tops_images_text_2 {
+    position: absolute;
+    content: "";
+    color: white;
+    font-size: small;
+    top: 655;
+    left: 815;
+}
+@media screen and (max-width: 670px) {
+    .tank_tops_images_text_2 {
+    position: absolute;
+    content: "";
+    color: white;
+    font-size: small;
+    top: 1255;
+    left: 50;
+} 
+}
+.feautured_products_images {
+    width: 270px;
+    float: left;
+    margin: 2;
+}
+.feautured_products {
+    position: absolute;
+    content: "";
+    top: 800;
+    left: 120;
     
+}
+@media screen and (max-width: 670px) {
+    .feautured_products {
+    position: relative;
+    content: "";
+    top: 170;
+   left: 10;
+   margin: 30;
+}
+}
+@media screen and (max-width: 670px) {
+    .feautured_products_images {
+    width: 158px;
+    float: left;
+    margin: 2;
+}
+}
+.special_edition_text {
+    border: 2px solid;
+    height: 360px;
+    width: 100%;
+    background-color: rgb(253, 253, 148);
+    position: absolute;
+    content: "";
+    
+}
+@media screen and (max-width: 670px) {
+    .special_edition_text {
+    border: 2px solid;
+    height: 360px;
+    width: 100%;
+    background-color: rgb(253, 253, 148);
+}
 }
 .special_edition {
     position: relative;
     content: "";
-    top: 1600;
+    top: 1000px;
+ 
 }
-.special_edition_content_image {
-    height: 340px;
+@media screen and (max-width: 670px) {
+    .special_edition {
     position: relative;
     content: "";
-    right: 1100;
-}
-.special_edition__text {
-    position: absolute;
-    content: "";
-    bottom: 120;
-    left: 220;
-    color: rgb(0, 0, 0);
-}
-@media screen and (max-width: 900px) {
-    .special_edition_content {
-    height: 500px;
-    width: 100%;
-    background-color: rgb(240, 236, 157);
-   position: absolute;
-   content: "";
-   top: 590; 
-}
-.special_edition_content_image {
-    height: 340px;
-    position: relative;
-    content: "";
-    right: 10;
-}
-.special_edition__text {
-    position: absolute;
-    content: "";
-    bottom: 150;
-    left: 10;
-    color: rgb(255, 255, 255);
-}
-}
-.about_brand_content {
-    float: left;
-    width: 100%;
-    padding: 10px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-.about_brand {
-    position: relative;
-    top: 1500;
-}
-@media screen and (max-width: 900px) {
-    .about_brand_content {
-    float: left;
-    width: 403px;
-    padding: 10px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-.about_brand {
-    position: relative;
-    top: 1910;
-}
-}
-.category_1_dress {
-    position: relative;
-    content: "";
-    top: 2830;
-    width: 466px;
-    float: left;
-    padding: 10px;
-    background-color: yellow;
-    height: 150px;
-}
-.footer_logo {
-    height: 130px;
-}
-@media screen and (max-width: 900px) {
-    .category_1_dress {
-    position: relative;
-    content: "";
-    top:2850;
-    width: 134px;
-    float: left;
-    height: 300px;
-    background-color: yellow;
-   
-}
-.footer_logo {
-    height: 70px;
-    position: absolute;
-    content: "";
-    right: -10;
-}
-}
-.slideshow-container {
-    position: absolute;
-    content: "";
-    top: 3200;
-    left: 200;
-  
-}
-@media screen and (max-width: 900px) {
-    .slideshow-container {
-    position: absolute;
-    content: "";
-    top: 3990;
-    left: -10;
-}
-}
-.text1 {
-    position: absolute;
-    content: "";
-    bottom: 200px;
-    left: 200;
-    font-size: xx-large;
-    font-family: 'Times New Roman', Times, serif;
-}
-@media screen and (max-width: 800px) {
-    .text1 {
-    position: absolute;
-    content: "";
-    bottom: 100px;
-    left: 10;
-    font-size: large;
-    font-family: 'Times New Roman', Times, serif;
+    top: 2100px;
 } 
 }
-.myChart {
+@media screen and (max-width: 670px) {
+    .special_edition_text1 {
+        position: relative;
+    content: "";
+    top: 100;
+    right: -1;
+}
+}
+.special_edition_text1 {
+    position: relative;
+    content: "";
+    top: 100;
+    right: -1;
+    margin: 15;
+}
+.about_shop_text {
+    
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+@media screen and (max-width: 670px) {
+    .about_shop_text {
+    position: relative;
+    content: "";
+    top: 1100;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 100%;
+}
+}
+@media screen and (max-width: 670px) {
+    .about_shop {
     position: absolute;
     content: "";
-    top: 2480;
-    left: 500;
+    top: 2300;
+    width: 100%;
 }
-@media screen and (max-width: 800px) {
+}
+.about_shop {
+    position: absolute;
+    content: "";
+    top: 1790;
+    width: 100%;
+}
+.myChart {
+    position: relative;
+    content: "";
+    top: 1700;
+    width: 100%;
+}
+@media screen and (max-width: 870px) {
     .myChart {
     position: relative;
     content: "";
-    top: 3100;
-    left: 10;
-    width: 360px;
-    height: 10px;
-}  
+    top: 2790;
+ width: 100%;  
 }
+}
+.slideshow-container {
+  position: relative;
+  content: "";
+  top: 1800;
+ max-width: 800px;
+ margin: auto;
+}
+
+@media screen and (max-width: 870px) {
+    .slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  content: "";
+  top: 1440;
+  width: 100%;
+}
+}
+.category_dress {
+    width: 100%;
+    background-color: yellow;
+    height: 200px;
+}
+@media screen and (max-width: 870px) {
+    .category_dress {
+    width: 100%;
+    background-color: yellow;
+    height: 200px;
+    position: absolute;
+    content: "";
+    bottom: 150;
+} 
+}
+.category {
+    position: relative;
+    content: "";
+    top: 1800;
+}
+
 </style>
 <body>
-    <header class="header">
-
+     <!-- Navigation bar -->
+     <header class="header">
+        <!-- Logo -->
         <a href="#" class="logo">LR</a>
-     
+        <!-- Hamburger icon -->
         <input class="side-menu" type="checkbox" id="side-menu"/>
         <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
-   
+        <!-- Menu -->
         <nav class="nav">
             <ul class="menu">
                 <li><a href="#">Gallery</a></li>
@@ -513,208 +426,209 @@ bottom: 77;
         </nav>
     </header>
     <!-- Main content -->
-    <div class="hero_section">
-<div class="hero_section_image">
-<img src="Images/header_image.jpg" alt="" class="hero_section_image">
+ <div class="hero_section_image">
+<img src="Images/hero_section_image.jpg" alt="" style="width: 100%; height: 350px;">
+ </div>
+ <div class="hero_section_image_text">
+<h1>Raining Offers for hot summer</h1>
+<h3>25% off for all products</h3>
+<button type="button">ShopNow</button>
+ </div>
+ <div class="tank_tops">
+<div class="tank_tops_images">
+<img src="Images/tank_top_1.jpg" alt="" style="width: 100%; height: 300px;">
 </div>
-<div class="hero_section_text">
-<h2>Raining Offers for hot summer</h2>
-<p>25% off for all products</p>
-</div>
-<div class="button">
-    <button type="button" style="height: 60; width: 290;">ShopNow</button>
-</div>
+<div class="tank_tops_images">
+    <img src="Images/tank_top_2.jpg" alt="" style="width: 100%; height: 300px;">
     </div>
-    <div class="offers_section">
-<div class="offers_section_image">
-<img src="Images/shopping_add1.jpg" alt="" class="shopping_add1">
-</div>
-<div class="offers_section_image">
-    <img src="Images/shopping_add2.jpg" alt="" class="shopping_add2">
-    </div>
-    <div class="offers_section_image">
-        <img src="Images/shopping_add3.jpg" alt="" class="shopping_add3">
+    <div class="tank_tops_images">
+        <img src="Images/tank_top_3.jpg" alt="" style="width: 100%; height: 300px;">
         </div>
-        <div class="offers_section_image_text">
+ </div>
+ <div class="tank_tops_text">
+<div class="tank_tops_images_text">
 <h1>20% Off on Tank Tops</h1>
-   <h3>Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit. Proin ac dictum.</h3>    
+<p>Lorem ipsum dolor sit amet, consectetur <br>adipiscing elit. Proin ac dictum.</p>
 </div>
-<div class="offers_section_image_text1">
+<div class="tank_tops_images_text_1">
     <h1>20% Off on Tank Tops</h1>
-       <h3>Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit. Proin ac dictum.</h3>    
+    <p>Lorem ipsum dolor sit amet, consectetur <br>adipiscing elit. Proin ac dictum.</p>
     </div>
-    <div class="offers_section_image_text2">
+    <div class="tank_tops_images_text_2">
         <h1>20% Off on Tank Tops</h1>
-           <h3>Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit. Proin ac dictum.</h3>    
+        <p>Lorem ipsum dolor sit amet, consectetur <br>adipiscing elit. Proin ac dictum.</p>
         </div>
-    </div>
-    <div class="featured_products">
-        <div class="featured_products_items">
-        <a href="cart.html"><img src="Images/sports_shoes1.jpg" alt="" class="featured_products_items1"></a>
-        <h4>DNK Yellow Shoes</h4>
-        <p>₹120.00</p>
-        </div>
-        <div class="featured_products_items">
-            <img src="Images/sports_shoes2.jpg" alt="" class="featured_products_items2">
-            <h4>DNK Yellow Shoes</h4>
-            <p>₹120.00</p>
-            </div>
-            <div class="featured_products_items">
-                <img src="Images/jeans_pant1.jpg" alt="" class="featured_products_items3">
-                <h4>DNK Yellow Shoes</h4>
-                <p>₹120.00</p>
-                </div>
-                <div class="featured_products_items">
-                    <img src="Images/jeans_pant2.jpg" alt="" class="featured_products_items4">
-                    <h4>DNK Yellow Shoes</h4>
-                    <p>₹120.00</p>
-                    </div>
-                    <div class="featured_products_items">
-                        <img src="Images/jeans_pant3.jpg" alt="" class="featured_products_items5">
-                        <h4>DNK Yellow Shoes</h4>
-                        <p>₹120.00</p>
-                        </div>
-                        <br>
-                        <div class="featured_products_items">
-                            <img src="Images/jeans_pant4.jpg" alt="" class="featured_products_items5">
-                            <h4>DNK Yellow Shoes</h4>
-                            <p>₹120.00</p>
-                            </div>
-                            <div class="featured_products_items">
-                                <img src="Images/bracelite.jpg" alt="" class="featured_products_items5">
-                                <h4>DNK Yellow Shoes</h4>
-                                <p>₹120.00</p>
-                                </div>
-                                <div class="featured_products_items">
-                                    <img src="Images/brownpurse.jpg" alt="" class="featured_products_items5">
-                                    <h4>DNK Yellow Shoes</h4>
-                                    <p>₹120.00</p>
-                                    </div>
-                                    <div class="featured_products_items">
-                                        <img src="Images/redbag.jpg" alt="" class="featured_products_items5">
-                                        <h4>DNK Yellow Shoes</h4>
-                                        <p>₹120.00</p>
-                                        </div>
-                                        <div class="featured_products_items">
-                                            <img src="Images/handbag.jpg" alt="" class="featured_products_items5">
-                                            <h4>DNK Yellow Shoes</h4>
-                                            <p>₹120.00</p>
-                                            </div>
-        </div>
-
-     
-        <div class="special_edition">
-            <div class="special_edition_content">
-            <img src="Images/specialedition.png" alt="" class="special_edition_content_image">
-            <div class="special_edition__text">
-            <div>
-                <h3>Limited Time Offer</h3>
-                <h1>SpecialEdition</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus <br> nec ullamcorper mattis, pulvinar dapibus leo.</p>
-            <h3>Buy This T-shirt At 20% Discount, Use Code OFF20</h3>
-            </div>
-            </div>
-            </div>
-            </div>
-            <div class="about_brand">
-                <div class="about_brand_content">
-                <h4>WorldWideShipping</h4>
-                <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-                </p>
-                </div>
-                <div class="about_brand_content">
-                    <h4>BestQuality</h4>
-                    <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-                    </div>
-                    <div class="about_brand_content">
-                        <h4>BestOffers</h4>
-                        <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. </p>
-                        </div>
-                        <div class="about_brand_content">
-                        <h4>SecurePayments</h4>
-                        <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. </p>
-                        </div>
-                </div>
-                <div class="MyChart">
-                    <div id="myChart" style="width: 100%; max-width: 890px; height: 780px;"></div>
-                    <script>
-                    google.charts.load('current',{'packages':['corechart']});
-                    google.charts.setOnLoadCallback(drawChart);
-                    function drawChart() {
-                        const data = google.visualization.arrayToDataTable([
-                    ['Contry','Mhl'],
-                    ['USA',76],
-                    ['Japan',65],
-                  ['USA',32],
-                  ['Germany',89]
-                        ]);
-                        const options = {
-                    title: 'World Wide Production'
-                        };
-                        const chart = new
-                        google.visualization.BarChart(document.getElementById('myChart'));
-                        chart.draw(data, options);
-                    }
-                    </script>
-                </div>
-                <div class="slideshow-container">
-<div class="mySlides">
-<img src="Images/shopping_ad_1.jpg" alt="" style="width: 100%;">
-<div class="text1">Upto 80% off Via Coupons</div>
+ </div>
+ <div class="feautured_products">
+<div class="feautured_products_images">
+<img src="Images/sports_shoes1.jpg" alt="" style="width: 100%; height: 200px;">
+<p>DNK YELLOW SHOES</p>
+<p>Rs 120</p>
 </div>
-<div class="mySlides">
-    <img src="Images/shoping_ad_2.jpg" alt="" style="width: 100%;">
+<div class="feautured_products_images">
+    <img src="Images/sports_shoes2.jpg" alt="" style="width: 100%; height: 200px;">
+    <p>DNK YELLOW SHOES</p>
+<p>Rs 120</p>
     </div>
-    <div class="mySlides">
-        <img src="Images/shoping_ad_3.jpg" alt="" style="width: 100%;">
+    <div class="feautured_products_images">
+        <img src="Images/jeans_pant9.jpg" alt="" style="width: 100%; height: 200px;">
+        <p>DNK YELLOW SHOES</p>
+<p>Rs 120</p>
         </div>
+        <div class="feautured_products_images">
+            <img src="Images/redbag.jpg" alt="" style="width: 100%; height: 200px;">
+            <p>DNK YELLOW SHOES</p>
+<p>Rs 120</p>
+            </div>
+            <div class="feautured_products_images">
+                <img src="Images/bracelite.jpg" alt="" style="width: 100%; height: 200px;">
+                <p>DNK YELLOW SHOES</p>
+<p>Rs 120</p>
                 </div>
-                <div style="text-align:center">
-                    <span class="dot"></span> 
-                    <span class="dot"></span> 
-                    <span class="dot"></span> 
-                  </div>
-                <script>
-                    let slideIndex = 0;
-                    showSlides();
-                    
-                    function showSlides() {
-                      let i;
-                      let slides = document.getElementsByClassName("mySlides");
-                      let dots = document.getElementsByClassName("dot");
-                      for (i = 0; i < slides.length; i++) {
-                        slides[i].style.display = "none";  
-                      }
-                      slideIndex++;
-                      if (slideIndex > slides.length) {slideIndex = 1}    
-                      for (i = 0; i < dots.length; i++) {
-                        dots[i].className = dots[i].className.replace(" active", "");
-                      }
-                      slides[slideIndex-1].style.display = "block";  
-                      dots[slideIndex-1].className += " active";
-                      setTimeout(showSlides, 2000); // Change image every 2 seconds
-                    }
-                    </script>
-                    <br>
-                <footer>
-                    <div class="category_1">
-                        <div class="category_1_dress">
-                            <p>Women Jeans</p>
-                            <p>Tops and Shirts</p>
-                            <p>Women Jackets</p>
-                            <p>Heels and Flats</p>
-                            <p>Women Accessories</p>
-                        </div>
-                        <div class="category_1_dress">
-                            <p>Men Jeans</p>
-                            <p>Men Shirts</p>
-                            <p>MenShoes</p>
-                            <p>Men Accessories</p>
-                        </div>
-                        <div class="category_1_dress">
-                         <img src="Images/logo.png" alt="" class="footer_logo">
-                        </div>
+                <div class="feautured_products_images">
+                    <img src="Images/brownpurse.jpg" alt="" style="width: 100%; height: 200px;">
+                    <p>DNK YELLOW SHOES</p>
+<p>Rs 120</p>
                     </div>
-                </footer>
+                    <div class="feautured_products_images">
+                        <img src="Images/handbag.jpg" alt="" style="width: 100%; height: 200px;">
+                        <p>DNK YELLOW SHOES</p>
+<p>Rs 120</p>
+                        </div>
+                        <div class="feautured_products_images">
+                            <img src="Images/jeans_pant2.jpg" alt="" style="width: 100%; height: 200px;">
+                            <p>DNK YELLOW SHOES</p>
+<p>Rs 120</p>
+                            </div>
+                         
+ </div>
+ <div class="special_edition">
+<div class="special_edition_text">
+    <div class="special_edition_text1">
+        <h3>Limited Time Offer</h3>
+        <h1>SpecialEdition</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus
+            nec ullamcorper mattis, pulvinar dapibus leo. <br>
+            Buy This T-shirt At 20% Discount, Use Code OFF20</p>
+    </div>
+</div>
+</div>
+<div class="about_shop">
+<div class="about_shop_text">
+<h4>WorldWideShipping </h4>
+<p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+</div>
+<div class="about_shop_text">
+    <h4>BestQuality</h4>
+    <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+    </div>
+    <div class="about_shop_text">
+        <h4>BestOffers</h4>
+        <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+        </div>
+</div>
+<div class="myChart">
+    <center>
+        <div id="myChart" style="width:100%; max-width:600px; height:500px;"></div>
+
+        <script>
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+        
+        function drawChart() {
+        
+        // Set Data
+        const data = google.visualization.arrayToDataTable([
+          ['Contry', 'Mhl'],
+          ['Italy',55],
+          ['France',49],
+          ['Spain',44],
+          ['USA',24],
+          ['Argentina',15]
+        ]);
+        
+        // Set Options
+        const options = {
+          title:'World Wide Production'
+        };
+        
+        // Draw
+        const chart = new google.visualization.BarChart(document.getElementById('myChart'));
+        chart.draw(data, options);
+        
+        }
+        </script>
+    </center>
+   
+</div>
+
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+   
+      <img src="Images/shopping_ad_1.jpg" style="width:100%">
+
+    </div>
+    
+    <div class="mySlides fade">
+
+      <img src="Images/shoping_ad_2.jpg" style="width:100%">
+
+    </div>
+    
+    <div class="mySlides fade">
+  
+      <img src="Images/shoping_ad_3.jpg" style="width:100%">
+  
+    </div>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
+    
+    <script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+    </script>
+     <footer>
+<div class="category">
+<div class="category_dress">
+<div class="category_dress_1">
+<p>Women Jeans</p>
+<p>Tops and Shirts</p>
+<p>Women Accessories</p>
+</div>
+<div class="category_dress_2">
+    <p>Women Accessories</p>
+    <p>Heels and Flats</p>
+    <p>Men Jeans</p>
+    <p>Men Shoes</p>
+    <p>Men Accessories</p>
+    </div>
+</div>
+</div>
+    </footer>
 </body>
 </html>
