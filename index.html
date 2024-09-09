@@ -180,7 +180,20 @@ body:has(.side-menu:checked) {
 button {
     width: 100%;
     height: 50px;
+    animation-name: button;
+    animation-duration: 4s;
+    background-color: white;
+    position: relative;
+    animation-duration: 3s;  
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    cursor: pointer;
 }
+@keyframes button {
+  from {bottom: 110px;}
+  to {bottom:0px; background-color: rgb(184, 239, 32);}
+}
+
 .tank_tops_images {
     width: 300px;
     float: left;
@@ -188,6 +201,7 @@ button {
     margin: 2;
     top: 100;
     left: 200;
+    cursor: pointer;
 }
 @media screen and (max-width: 670px) {
     .tank_tops_images {
@@ -196,6 +210,7 @@ button {
     margin: 2;
     top: 100;
     left: 40;
+    cursor: pointer;
 }
 
 }
@@ -257,6 +272,7 @@ button {
     width: 270px;
     float: left;
     margin: 2;
+    cursor: pointer;
 }
 .feautured_products {
     position: absolute;
@@ -390,6 +406,7 @@ button {
     width: 100%;
     background-color: yellow;
     height: 200px;
+    cursor: pointer;
 }
 @media screen and (max-width: 870px) {
     .category_dress {
@@ -399,6 +416,7 @@ button {
     position: absolute;
     content: "";
     bottom: 150;
+    cursor: pointer;
 } 
 }
 .category {
@@ -461,7 +479,7 @@ button {
  </div>
  <div class="feautured_products">
 <div class="feautured_products_images">
-<img src="Images/sports_shoes1.jpg" alt="" style="width: 100%; height: 200px;">
+<a href="cart.html"><img src="Images/sports_shoes1.jpg" alt="" style="width: 100%; height: 200px;"></a>
 <p>DNK YELLOW SHOES</p>
 <p>Rs 120</p>
 </div>
